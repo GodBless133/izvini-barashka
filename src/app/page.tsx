@@ -83,7 +83,7 @@ export default function Home() {
                 className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-xs font-medium tracking-wide text-white backdrop-blur-sm sm:text-sm"
               >
                 <Sparkles className="h-3.5 w-3.5 text-amber-200" />
-                <span>с любовью и сожалением</span>
+                <span>настоящая дружба важнее любых обид</span>
               </motion.div>
 
               {/* Главный текст */}
@@ -104,7 +104,9 @@ export default function Home() {
                     </h2>
 
                     <p className="mt-6 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
-                      Мне правда очень жаль. Я не хотел тебя расстраивать.
+                      Мне правда очень жаль, что так вышло. Ты замечательная
+                      подруга, и я совсем не хочу, чтобы между нами была
+                      обида. Давай мириться? 🤗
                     </p>
 
                     <motion.div
@@ -138,10 +140,11 @@ export default function Home() {
                       <Heart className="h-8 w-8 fill-rose-500 text-rose-500" />
                     </motion.div>
                     <h2 className="font-serif text-4xl font-bold text-white drop-shadow-lg sm:text-5xl">
-                      Спасибо! 💗
+                      Ура! Мы помирились 💗
                     </h2>
                     <p className="mt-4 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
-                      Ты самый понимающий барашек на свете. Обещаю быть нежнее.
+                      Спасибо, что выслушала. Ты лучшая подруга на свете —
+                      давай больше не ссориться по пустякам 🌹
                     </p>
                     <button
                       onClick={() => setAccepted(false)}
