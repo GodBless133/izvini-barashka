@@ -105,7 +105,6 @@ export default function Home() {
 
                     <p className="mt-6 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
                       Мне правда очень жаль. Я не хотел тебя расстраивать.
-                      Ты мне очень дорог, и я хочу, чтобы между нами снова было тепло.
                     </p>
 
                     <motion.div
