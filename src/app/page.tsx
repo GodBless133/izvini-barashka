@@ -144,8 +144,7 @@ export default function Home() {
                     </h2>
                     <p className="mt-4 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
                       Документ подтверждает: Яна — лучшая подруга, классная
-                      паспортистка и просто замечательный человек. Действительно
-                      до следующей ссоры 🌹
+                      паспортистка и просто замечательный человек 🌹
                     </p>
                     <button
                       onClick={() => setStamped(false)}
@@ -166,7 +165,7 @@ export default function Home() {
             transition={{ delay: 1, duration: 0.8 }}
             className="mt-6 text-center text-xs tracking-widest text-rose-50/70 uppercase"
           >
-            🌹 от твоего седого и белобрысого друга 🌹
+            🌹 от Кривцова 🌹
           </motion.p>
         </motion.div>
       </section>
