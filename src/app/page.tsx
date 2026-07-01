@@ -165,7 +165,7 @@ export default function Home() {
             transition={{ delay: 1, duration: 0.8 }}
             className="mt-6 text-center text-xs tracking-widest text-rose-50/70 uppercase"
           >
-            🌹 от твоего седого и белобрысого 🌹
+            🌹 от твоего седого и белобрысого друга 🌹
           </motion.p>
         </motion.div>
       </section>
