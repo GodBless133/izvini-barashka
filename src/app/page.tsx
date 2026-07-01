@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Heart, Sparkles } from 'lucide-react'
+import { Flower2, Handshake, Smile, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="pointer-events-none absolute -bottom-24 right-0 h-48 w-48 rounded-full bg-pink-300/30 blur-3xl" />
 
             <div className="relative flex flex-col items-center text-center">
-              {/* Иконка-сердечко */}
+              {/* Иконка-цветок */}
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -51,10 +51,10 @@ export default function Home() {
                 className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-white/30 shadow-lg"
               >
                 <motion.div
-                  animate={{ scale: [1, 1.18, 1] }}
-                  transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+                  animate={{ rotate: [0, 15, -15, 0] }}
+                  transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
                 >
-                  <Heart className="h-7 w-7 fill-rose-500 text-rose-500" />
+                  <Flower2 className="h-7 w-7 text-rose-200" />
                 </motion.div>
               </motion.div>
 
@@ -83,7 +83,7 @@ export default function Home() {
                 className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-xs font-medium tracking-wide text-white backdrop-blur-sm sm:text-sm"
               >
                 <Sparkles className="h-3.5 w-3.5 text-amber-200" />
-                <span>с любовью и сожалением</span>
+                <span>дружба важнее любой ссоры</span>
               </motion.div>
 
               {/* Главный текст */}
@@ -104,8 +104,9 @@ export default function Home() {
                     </h2>
 
                     <p className="mt-6 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
-                      Мне правда очень жаль. Я не хотел тебя расстраивать.
-                      Ты мне очень дорог, и я хочу, чтобы между нами снова было тепло.
+                      Мне правда жаль, что так вышло. Я совсем не хотел тебя
+                      обидеть. Ты классная подруга, и ссориться с тобой совсем не
+                      хочется.
                     </p>
 
                     <motion.div
@@ -118,7 +119,7 @@ export default function Home() {
                         size="lg"
                         className="rounded-full border border-white/40 bg-rose-500/90 px-8 py-6 text-base font-semibold text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-rose-500 sm:text-lg"
                       >
-                        <Heart className="mr-2 h-5 w-5 fill-white" />
+                        <Handshake className="mr-2 h-5 w-5" />
                         Принять извинения
                       </Button>
                     </motion.div>
@@ -136,13 +137,13 @@ export default function Home() {
                       transition={{ type: 'spring', stiffness: 200, damping: 10 }}
                       className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-rose-100 shadow-lg"
                     >
-                      <Heart className="h-8 w-8 fill-rose-500 text-rose-500" />
+                      <Smile className="h-8 w-8 text-rose-500" />
                     </motion.div>
                     <h2 className="font-serif text-4xl font-bold text-white drop-shadow-lg sm:text-5xl">
-                      Спасибо! 💗
+                      Спасибо! 🤗
                     </h2>
                     <p className="mt-4 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
-                      Ты самый понимающий барашек на свете. Обещаю быть нежнее.
+                      Ты лучшая подруга! Давай больше не ссориться 🤝
                     </p>
                     <button
                       onClick={() => setAccepted(false)}
