@@ -21,9 +21,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Извини барашка 🌹",
-  description: "Искренние извинения, окружённые кустовыми розами.",
-  keywords: ["извинения", "розы", "барашек"],
+  title: "Яна паспортистка 🌹",
+  description: "Прикольная страничка для лучшей подруги — Яны-паспортистки.",
+  keywords: ["Яна", "паспортистка", "подруга"],
   authors: [{ name: "Z.ai Team" }],
   icons: {
     icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",

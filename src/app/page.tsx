@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Heart, Sparkles } from 'lucide-react'
+import { Sparkles, Stamp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function Home() {
-  const [accepted, setAccepted] = useState(false)
+  const [stamped, setStamped] = useState(false)
 
   return (
     <main className="relative min-h-screen w-full overflow-hidden">
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="pointer-events-none absolute -bottom-24 right-0 h-48 w-48 rounded-full bg-pink-300/30 blur-3xl" />
 
             <div className="relative flex flex-col items-center text-center">
-              {/* Иконка-сердечко */}
+              {/* Иконка-печать */}
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -51,14 +51,14 @@ export default function Home() {
                 className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-white/30 shadow-lg"
               >
                 <motion.div
-                  animate={{ scale: [1, 1.18, 1] }}
-                  transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+                  animate={{ rotate: [0, -12, 12, 0] }}
+                  transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
                 >
-                  <Heart className="h-7 w-7 fill-rose-500 text-rose-500" />
+                  <Stamp className="h-7 w-7 text-rose-200" />
                 </motion.div>
               </motion.div>
 
-              {/* Изображение барашка */}
+              {/* Изображение Яны-паспортистки */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -67,8 +67,8 @@ export default function Home() {
               >
                 <div className="absolute inset-0 rounded-full bg-white/40 blur-2xl" />
                 <motion.img
-                  src="/lamb.png"
-                  alt="Милый барашек среди роз"
+                  src="/yana.png"
+                  alt="Яна — паспортистка среди роз"
                   className="relative h-40 w-40 rounded-full border-4 border-white/60 object-cover shadow-xl sm:h-52 sm:w-52"
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
@@ -83,30 +83,30 @@ export default function Home() {
                 className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-xs font-medium tracking-wide text-white backdrop-blur-sm sm:text-sm"
               >
                 <Sparkles className="h-3.5 w-3.5 text-amber-200" />
-                <span>седой и белобрысый просит прощения 🐑</span>
+                <span>официально заверено лучшей подругой 📄</span>
               </motion.div>
 
               {/* Главный текст */}
               <AnimatePresence mode="wait">
-                {!accepted ? (
+                {!stamped ? (
                   <motion.div
-                    key="apology"
+                    key="intro"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0, y: -10 }}
                     className="flex flex-col items-center"
                   >
                     <h1 className="font-serif text-5xl font-bold leading-tight text-white drop-shadow-lg sm:text-6xl md:text-7xl">
-                      Извини
+                      Яна
                     </h1>
-                    <h2 className="mt-2 font-serif text-4xl font-semibold italic text-rose-100 drop-shadow-md sm:text-5xl md:text-6xl">
-                      барашка
+                    <h2 className="mt-2 font-serif text-3xl font-semibold italic text-rose-100 drop-shadow-md sm:text-4xl md:text-5xl">
+                      паспортистка
                     </h2>
 
                     <p className="mt-6 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
-                      Так, твой седой и белобрысый друг официально
-                      капитулирует и просит прощения. Я правда жалею,
-                      что так вышло, барашка.
+                      Если бы выдавали паспорта на звание «самая классная подруга» —
+                      Яне пришлось бы работать без выходных, потому что очередей
+                      было бы на весь город 🌹
                     </p>
 
                     <motion.div
@@ -115,42 +115,43 @@ export default function Home() {
                       className="mt-8"
                     >
                       <Button
-                        onClick={() => setAccepted(true)}
+                        onClick={() => setStamped(true)}
                         size="lg"
                         className="rounded-full border border-white/40 bg-rose-500/90 px-8 py-6 text-base font-semibold text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-rose-500 sm:text-lg"
                       >
-                        <Heart className="mr-2 h-5 w-5 fill-white" />
-                        Принять извинения! 💗
+                        <Stamp className="mr-2 h-5 w-5" />
+                        Поставить печать! 💗
                       </Button>
                     </motion.div>
                   </motion.div>
                 ) : (
                   <motion.div
-                    key="thanks"
+                    key="stamped"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="flex flex-col items-center"
                   >
                     <motion.div
-                      initial={{ scale: 0, rotate: -30 }}
-                      animate={{ scale: 1, rotate: 0 }}
+                      initial={{ scale: 0, rotate: -45 }}
+                      animate={{ scale: 1, rotate: -12 }}
                       transition={{ type: 'spring', stiffness: 200, damping: 10 }}
                       className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-rose-100 shadow-lg"
                     >
-                      <Heart className="h-8 w-8 fill-rose-500 text-rose-500" />
+                      <Stamp className="h-8 w-8 text-rose-500" />
                     </motion.div>
                     <h2 className="font-serif text-4xl font-bold text-white drop-shadow-lg sm:text-5xl">
-                      Ура! Мы помирились 💗
+                      Печать поставлена! 💗
                     </h2>
                     <p className="mt-4 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
-                      Седой и белобрысый друг тебе благодарен, но барашка
-                      всё равно наглая.
+                      Документ подтверждает: Яна — лучшая подруга, классная
+                      паспортистка и просто замечательный человек. Действительно
+                      до следующей ссоры 🌹
                     </p>
                     <button
-                      onClick={() => setAccepted(false)}
+                      onClick={() => setStamped(false)}
                       className="mt-6 text-sm font-medium text-rose-100/80 underline-offset-4 hover:underline"
                     >
-                      написать ещё раз
+                      поставить ещё одну печать
                     </button>
                   </motion.div>
                 )}
