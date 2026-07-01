@@ -83,7 +83,7 @@ export default function Home() {
                 className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-xs font-medium tracking-wide text-white backdrop-blur-sm sm:text-sm"
               >
                 <Sparkles className="h-3.5 w-3.5 text-amber-200" />
-                <span>настоящая дружба важнее любых обид</span>
+                <span>седой и белобрысый просит прощения 🐑</span>
               </motion.div>
 
               {/* Главный текст */}
@@ -104,9 +104,9 @@ export default function Home() {
                     </h2>
 
                     <p className="mt-6 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
-                      Мне правда очень жаль, что так вышло. Ты замечательная
-                      подруга, и я совсем не хочу, чтобы между нами была
-                      обида. Давай мириться? 🤗
+                      Так, твой седой и белобрысый друг официально
+                      капитулирует и просит прощения. Я правда жалею,
+                      что так вышло, барашка.
                     </p>
 
                     <motion.div
@@ -120,7 +120,7 @@ export default function Home() {
                         className="rounded-full border border-white/40 bg-rose-500/90 px-8 py-6 text-base font-semibold text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-rose-500 sm:text-lg"
                       >
                         <Heart className="mr-2 h-5 w-5 fill-white" />
-                        Принять извинения
+                        Принять извинения! 💗
                       </Button>
                     </motion.div>
                   </motion.div>
@@ -143,8 +143,8 @@ export default function Home() {
                       Ура! Мы помирились 💗
                     </h2>
                     <p className="mt-4 max-w-md text-base leading-relaxed text-rose-50/90 sm:text-lg">
-                      Спасибо, что выслушала. Ты лучшая подруга на свете —
-                      давай больше не ссориться по пустякам 🌹
+                      Седой и белобрысый друг тебе благодарен, но барашка
+                      всё равно наглая.
                     </p>
                     <button
                       onClick={() => setAccepted(false)}
@@ -165,7 +165,7 @@ export default function Home() {
             transition={{ delay: 1, duration: 0.8 }}
             className="mt-6 text-center text-xs tracking-widest text-rose-50/70 uppercase"
           >
-            🌹 среди кустовых роз 🌹
+            🌹 от твоего седого и белобрысого 🌹
           </motion.p>
         </motion.div>
       </section>
